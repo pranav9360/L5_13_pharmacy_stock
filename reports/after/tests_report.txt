@@ -1,0 +1,42 @@
+test_allergy_is_exact_medicine_match (test_pharmacy.PharmacyTests.test_allergy_is_exact_medicine_match) ... ok
+test_case_insensitive_allergies (test_pharmacy.PharmacyTests.test_case_insensitive_allergies) ... ok
+test_default_batch_logs_are_independent (test_pharmacy.PharmacyTests.test_default_batch_logs_are_independent) ... ok
+test_empty_stock_can_be_replenished_with_new_expiry (test_pharmacy.PharmacyTests.test_empty_stock_can_be_replenished_with_new_expiry) ... ok
+test_exact_available_quantity_can_be_dispensed (test_pharmacy.PharmacyTests.test_exact_available_quantity_can_be_dispensed) ... ok
+test_expired_stock_is_not_dispensed (test_pharmacy.PharmacyTests.test_expired_stock_is_not_dispensed) ... ok
+test_expiry_window_crosses_year_and_leap_day (test_pharmacy.PharmacyTests.test_expiry_window_crosses_year_and_leap_day) ... ok
+test_expiry_window_includes_both_boundaries (test_pharmacy.PharmacyTests.test_expiry_window_includes_both_boundaries) ... ok
+test_explicit_batch_log_accumulates (test_pharmacy.PharmacyTests.test_explicit_batch_log_accumulates) ... ok
+test_injected_patient_cannot_dispense (test_pharmacy.PharmacyTests.test_injected_patient_cannot_dispense) ... ok
+test_insufficient_stock_preserves_state (test_pharmacy.PharmacyTests.test_insufficient_stock_preserves_state) ... ok
+test_invalid_dispensing_quantities_preserve_state (test_pharmacy.PharmacyTests.test_invalid_dispensing_quantities_preserve_state) ... ok
+test_invalid_expiry_dates_preserve_state (test_pharmacy.PharmacyTests.test_invalid_expiry_dates_preserve_state) ... ok
+test_invalid_expiry_windows (test_pharmacy.PharmacyTests.test_invalid_expiry_windows) ... ok
+test_invalid_loaded_stock_is_rejected_atomically (test_pharmacy.PharmacyTests.test_invalid_loaded_stock_is_rejected_atomically) ... ok
+test_invalid_medicine_names (test_pharmacy.PharmacyTests.test_invalid_medicine_names) ... ok
+test_invalid_stock_quantities_preserve_state (test_pharmacy.PharmacyTests.test_invalid_stock_quantities_preserve_state) ... ok
+test_load_allows_zero_stock (test_pharmacy.PharmacyTests.test_load_allows_zero_stock) ... ok
+test_load_normalizes_and_merges_equivalent_names (test_pharmacy.PharmacyTests.test_load_normalizes_and_merges_equivalent_names) ... ok
+test_medicine_is_usable_on_expiry_day (test_pharmacy.PharmacyTests.test_medicine_is_usable_on_expiry_day) ... ok
+test_multiple_allergies_are_normalized (test_pharmacy.PharmacyTests.test_multiple_allergies_are_normalized) ... ok
+test_normalized_additions_share_inventory (test_pharmacy.PharmacyTests.test_normalized_additions_share_inventory) ... ok
+test_positive_dispensing_records_and_decrements (test_pharmacy.PharmacyTests.test_positive_dispensing_records_and_decrements) ... ok
+test_restock_cannot_overwrite_existing_expiry (test_pharmacy.PharmacyTests.test_restock_cannot_overwrite_existing_expiry) ... ok
+test_setup_database_is_repeatable (test_pharmacy.PharmacyTests.test_setup_database_is_repeatable) ... ok
+test_unknown_medicine_preserves_state (test_pharmacy.PharmacyTests.test_unknown_medicine_preserves_state) ... ok
+test_unknown_patient_preserves_state (test_pharmacy.PharmacyTests.test_unknown_patient_preserves_state) ... ok
+test_export_closes_file_when_serialization_fails (test_security.SecurityTests.test_export_closes_file_when_serialization_fails) ... ok
+test_export_round_trip (test_security.SecurityTests.test_export_round_trip) ... ok
+test_invalid_json_is_reported_and_preserves_stock (test_security.SecurityTests.test_invalid_json_is_reported_and_preserves_stock) ... ok
+test_lookup_binds_injection_as_data (test_security.SecurityTests.test_lookup_binds_injection_as_data) ... ok
+test_lookup_handles_apostrophe (test_security.SecurityTests.test_lookup_handles_apostrophe) ... ok
+test_missing_file_preserves_stock (test_security.SecurityTests.test_missing_file_preserves_stock) ... ok
+test_permission_error_is_not_swallowed (test_security.SecurityTests.test_permission_error_is_not_swallowed) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.113s
+
+OK
+Allergy warning for Kavya
+Allergy warning for Meena
+Allergy warning for Arjun

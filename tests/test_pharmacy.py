@@ -29,10 +29,12 @@ class PharmacyTests(unittest.TestCase):
         )
 
     def reject(self, patient="Arjun", drug="Paracetamol", units=1):
-        """Check that rejection leaves every stock and prescription unchanged."""
+        """Check rejection leaves stock and prescriptions unchanged."""
         before_stock = deepcopy(pharmacy.stock)
         before_records = deepcopy(pharmacy.prescriptions)
-        self.assertFalse(pharmacy.dispense(patient, drug, units, today=TODAY))
+        self.assertFalse(
+            pharmacy.dispense(patient, drug, units, today=TODAY)
+        )
         self.assertEqual(pharmacy.stock, before_stock)
         self.assertEqual(pharmacy.prescriptions, before_records)
 

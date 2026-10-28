@@ -1,0 +1,62 @@
+{
+  "program_output.txt": {
+    "command": [
+      "python",
+      "pharmacy_system.py"
+    ],
+    "exit_code": 0,
+    "stdin": "\n"
+  },
+  "program_injection_output.txt": {
+    "command": [
+      "python",
+      "pharmacy_system.py"
+    ],
+    "exit_code": 0,
+    "stdin": "' OR 1=1 --\n"
+  },
+  "pylint_report.txt": {
+    "command": [
+      "python",
+      "-m",
+      "pylint",
+      "pharmacy_system.py"
+    ],
+    "exit_code": 0,
+    "stdin": null
+  },
+  "bandit_report.txt": {
+    "command": [
+      "python",
+      "-m",
+      "bandit",
+      "-r",
+      "pharmacy_system.py"
+    ],
+    "exit_code": 0,
+    "stdin": null
+  },
+  "flake8_report.txt": {
+    "command": [
+      "python",
+      "-m",
+      "flake8",
+      "pharmacy_system.py"
+    ],
+    "exit_code": 0,
+    "stdin": null
+  },
+  "tests_report.txt": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdin": null
+  }
+}

@@ -13,6 +13,7 @@ conn = sqlite3.connect(":memory:")
 stock = {}
 prescriptions = []
 
+
 def setup_database():
     """Create the sample patient database once, retaining existing patients."""
     with conn:
@@ -26,10 +27,12 @@ def setup_database():
              ("P3", "Meena", "ibuprofen")],
         )
 
+
 def find_patient(name):
     """Return patient IDs and allergies matching a literal patient name."""
     query = "SELECT id, allergy FROM patients WHERE name = ?"
     return conn.execute(query, (name,)).fetchall()
+
 
 def _medicine_name(drug):
     """Return the normalized medicine key or reject an invalid name."""
@@ -37,9 +40,12 @@ def _medicine_name(drug):
         raise ValueError("Medicine name must be a nonempty string")
     return drug.strip().casefold()
 
+
 def _valid_quantity(units, minimum=1):
     """Accept only integer quantities, excluding booleans and fractions."""
-    return isinstance(units, int) and not isinstance(units, bool) and units >= minimum
+    return (isinstance(units, int) and not isinstance(units, bool)
+            and units >= minimum)
+
 
 def _expiry_date(expiry):
     """Parse a strict ISO calendar date; reject malformed stock records."""
@@ -49,6 +55,7 @@ def _expiry_date(expiry):
     if parsed.isoformat() != expiry:
         raise ValueError("Expiry must use YYYY-MM-DD format")
     return parsed
+
 
 def add_stock(drug, units, expiry, batch_log=None):
     """Add positive whole units and return this caller's batch-log length.
@@ -68,6 +75,7 @@ def add_stock(drug, units, expiry, batch_log=None):
         batch_log = []
     batch_log.append((drug, units))
     return len(batch_log)
+
 
 def dispense(patient_name, drug, units, *, today=None):
     """Dispense only valid, available, unexpired, non-allergenic medicine.
@@ -100,6 +108,7 @@ def dispense(patient_name, drug, units, *, today=None):
     })
     return True
 
+
 def expiring_soon(days=30, *, today=None):
     """List stocked medicines expiring from today through days ahead inclusive.
 
@@ -115,10 +124,12 @@ def expiring_soon(days=30, *, today=None):
         and 0 <= (_expiry_date(medicine["expiry"]) - reference).days <= days
     ]
 
+
 def export_prescriptions(file="prescriptions.json"):
     """Export prescriptions as UTF-8 JSON and always close the output file."""
     with open(file, "w", encoding="utf-8") as output_file:
         json.dump(prescriptions, output_file)
+
 
 def load_stock(file="stock.json"):
     """Atomically load validated stock, normalizing medicine names.
@@ -142,20 +153,26 @@ def load_stock(file="stock.json"):
         _expiry_date(medicine.get("expiry"))
         previous = validated.get(drug)
         if previous and previous["expiry"] != medicine["expiry"]:
-            raise ValueError("Duplicate medicine names have different expiries")
+            raise ValueError(
+                "Duplicate medicine names have different expiries"
+            )
         validated[drug] = {
-            "units": medicine["units"] + (previous["units"] if previous else 0),
+            "units": (medicine["units"]
+                      + (previous["units"] if previous else 0)),
             "expiry": medicine["expiry"],
         }
     stock.clear()
     stock.update(validated)
     return True
 
+
 def print_stock():
     """Print the normalized medicine stock and its expiry dates."""
     print("Pharmacy Stock")
     for drug, medicine in stock.items():
-        print(drug, "->", medicine["units"], "units, expires", medicine["expiry"])
+        print(drug, "->", medicine["units"],
+              "units, expires", medicine["expiry"])
+
 
 def main():
     """Run a dated demonstration and allow a literal patient-name lookup."""
@@ -178,6 +195,7 @@ def main():
     print("Expiring within 30 days:", expiring_soon())
     export_prescriptions()
     print_stock()
+
 
 if __name__ == "__main__":
     try:
