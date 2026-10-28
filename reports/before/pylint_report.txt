@@ -1,0 +1,27 @@
+************* Module pharmacy_system
+pharmacy_system.py:36:0: C0301: Line too long (112/100) (line-too-long)
+pharmacy_system.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+pharmacy_system.py:11:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:19:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:21:12: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
+pharmacy_system.py:24:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:24:0: W0102: Dangerous default value [] as argument (dangerous-default-value)
+pharmacy_system.py:29:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:38:4: W0702: No exception type(s) specified (bare-except)
+pharmacy_system.py:41:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:49:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:50:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+pharmacy_system.py:50:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+pharmacy_system.py:54:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:55:4: W0603: Using the global statement (global-statement)
+pharmacy_system.py:58:4: W0702: No exception type(s) specified (bare-except)
+pharmacy_system.py:57:26: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+pharmacy_system.py:57:26: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+pharmacy_system.py:61:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:61:0: C0103: Function name "printStock" doesn't conform to snake_case naming style (invalid-name)
+pharmacy_system.py:66:0: C0116: Missing function or method docstring (missing-function-docstring)
+pharmacy_system.py:3:0: W0611: Unused import os (unused-import)
+
+-----------------------------------
+Your code has been rated at 6.90/10
+

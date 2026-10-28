@@ -1,0 +1,15 @@
+pharmacy_system.py:3:1: F401 'os' imported but unused
+pharmacy_system.py:11:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:19:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:24:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:25:80: E501 line too long (90 > 79 characters)
+pharmacy_system.py:29:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:36:80: E501 line too long (112 > 79 characters)
+pharmacy_system.py:38:5: E722 do not use bare 'except'
+pharmacy_system.py:41:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:49:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:54:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:58:5: E722 do not use bare 'except'
+pharmacy_system.py:61:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:66:1: E302 expected 2 blank lines, found 1
+pharmacy_system.py:83:1: E305 expected 2 blank lines after class or function definition, found 1

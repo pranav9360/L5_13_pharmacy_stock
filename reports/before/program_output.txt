@@ -1,0 +1,12 @@
+Arjun gets Amoxicillin: True
+Kavya gets Penicillin: True
+Allergy warning for Meena
+Meena gets ibuprofen: False
+Unknown patient: False
+Patient name to look up (Enter for Arjun): Lookup result: [('P2', 'none')]
+Expiring within 30 days: ['Amoxicillin']
+Pharmacy Stock
+Paracetamol -> 100 units, expires 2027-03-01
+Amoxicillin -> -10 units, expires 2025-12-31
+Penicillin -> 40 units, expires 2027-01-15
+Ibuprofen -> -15 units, expires 2026-11-30
